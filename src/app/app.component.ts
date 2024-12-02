@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Item } from "./item";
+import { ItemComponent } from './item/item.component';
 
 @Component({
   standalone: true,
@@ -31,6 +33,10 @@ export class AppComponent {
       description,
       done: false
     });
+  }
+
+  remove(item: Item) {
+    this.allItems.splice(this.allItems.indexOf(item), 1);
   }
 
   get items() {
