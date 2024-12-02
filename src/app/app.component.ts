@@ -22,6 +22,17 @@ export class AppComponent {
     { description: "Have dinner", done: false },
   ];
 
+  addItem(description: string) {
+    if (!description || description.trim() === '')
+      return;
+
+    // unshit method adds new item to the beginning of the array and the top of list 'allItems'
+    this.allItems.unshift({
+      description,
+      done: false
+    });
+  }
+
   get items() {
     if (this.filter === "all")
       return this.allItems;
