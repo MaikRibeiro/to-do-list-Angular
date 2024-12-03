@@ -28,7 +28,7 @@ export class AppComponent {
     if (!description || description.trim() === '')
       return;
 
-    // unshit method adds new item to the beginning of the array and the top of list 'allItems'
+    // unshift method adds new item to the beginning of the array and the top of list 'allItems'
     this.allItems.unshift({
       description,
       done: false
