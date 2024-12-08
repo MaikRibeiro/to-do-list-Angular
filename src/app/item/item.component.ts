@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Item } from '../item';
 
 @Component({
-  selector: 'app-item',
+  selector: 'ItemComponent',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './item.component.html',
