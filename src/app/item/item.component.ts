@@ -18,8 +18,7 @@ export class ItemComponent {
   @Output() remove =  new EventEmitter<Item>();
 
   saveItem(description: string) {
-    if (!description || description.trim() == '')
-      return;
+    if (!description || description.trim() == '') return;
 
     this.editable = false;
     this.item.description = description;

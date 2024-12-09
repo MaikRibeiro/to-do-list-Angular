@@ -25,8 +25,7 @@ export class AppComponent {
   ];
 
   addItem(description: string) {
-    if (!description || description.trim() === '')
-      return;
+    if (!description || description.trim() === '') return;
 
     // unshift method adds new item to the beginning of the array and the top of list 'allItems'
     this.allItems.unshift({
@@ -40,8 +39,7 @@ export class AppComponent {
   }
 
   get items() {
-    if (this.filter === "all")
-      return this.allItems;
+    if (this.filter === "all") return this.allItems;
 
     return this.allItems.filter((item) => 
       this.filter === "done" ? item.done : !item.done
