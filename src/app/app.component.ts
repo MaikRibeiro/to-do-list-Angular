@@ -35,6 +35,11 @@ export class AppComponent {
   }
 
   remove(item: Item) {
+    if (!item.done) {
+      const confirmation = confirm("The item has not yet been completed. Do you want to continue with the deletion?");
+      if (!confirmation) return;
+    }
+
     this.allItems.splice(this.allItems.indexOf(item), 1);
   }
 
