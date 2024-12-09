@@ -17,23 +17,23 @@
     <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
   </div>
 
-  <div class="btn-wrapper">
+  <div class="btns-filter">
     <button
-      class="btn btn-menu"
+      class="btn-option"
       [class.active]="filter == 'all'"
       (click)="filter = 'all'">
       All
     </button>
   
     <button
-      class="btn btn-menu"
+      class=""
       [class.active]="filter == 'active'"
       (click)="filter = 'active'">
       To Do
     </button>
   
     <button
-      class="btn btn-menu"
+      class=""
       [class.active]="filter == 'done'"
       (click)="filter = 'done'">
       Done
